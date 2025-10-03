@@ -48,6 +48,6 @@ def webhook_setter():
     bot.set_webhook(url=f"{render_url}/{BOT_TOKEN}")
     return "диагностический бот на месте", 200
 
-# Эта часть нужна, чтобы Render мог запустить сервер
+# Эта часть нужна, чтобы Render мог запустить сервер.
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
