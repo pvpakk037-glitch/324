@@ -28,7 +28,7 @@ def handle_text(message):
     )
     bot.send_message(message.chat.id, "Отлично! Сообщение передано админу.")
     bot.send_message(ADMIN_CHAT_ID, user_info, parse_mode="Markdown")
-    bot.forward_message(ADMIN_CHAT_ID, message.chat.id, message.message_id)
+    bot.send_message(ADMIN_CHAT_ID, message.text)
 
 def handle_photo(message):
     username = f"@{message.from_user.username}" if message.from_user.username else "Юз не найден"
